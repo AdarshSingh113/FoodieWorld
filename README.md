@@ -16,3 +16,23 @@
 -Https
 -Tree Shaking - Remove the unused code
 -Diff build for dev and prod
+
+
+/*
+# Header
+  -Logo
+  -NavItems
+  Body
+  -Seravh Bar
+  -Restauramnts comntainer
+  - Restauramnt card
+     -image
+     -Name of restaurant , star ,cusines ,time of delivery
+  Footer
+  -copyright
+  -links
+*/
+
+# Types of imports
+-Named export-for multiple exports
+-default export 

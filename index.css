@@ -1,3 +1,71 @@
-#heading{
-    color:blueviolet
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Slightly reduced padding */
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #343a40;
+}
+
+.logo {
+    width: 80px; /* Reduced logo size */
+}
+
+.nav-items ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav-items ul li {
+    margin: 0 15px; /* Reduced margin */
+    font-weight: bold;
+    font-size: 16px; /* Slightly smaller font size */
+    color: #343a40;
+    transition: all 0.3s ease;
+}
+
+.nav-items ul li:hover {
+    color: #007bff;
+    cursor: pointer;
+}
+
+/* Restaurant Card Styles */
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px; /* Reduced padding */
+}
+
+.res-card {
+    margin: 15px; /* Reduced margin */
+    padding: 15px; /* Reduced padding */
+    width: 220px; /* Smaller card width */
+    border: 1px solid #ced4da;
+    border-radius: 8px; /* Slightly smaller border radius */
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.res-card:hover {
+    cursor: pointer;
+    border: 1px solid #007bff;
+    transform: scale(1.03); /* Smaller scale on hover */
+    box-shadow: 0px 0px 15px 0px rgba(0, 123, 255, 0.2);
+}
+
+/* Search Styles */
+.search {
+    padding: 20px; /* Reduced padding */
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px; /* Slightly smaller font size */
+}
+
+.res-logo {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
