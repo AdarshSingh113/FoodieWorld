@@ -36,3 +36,13 @@
 # Types of imports
 -Named export-for multiple exports
 -default export 
+
+# React Hooks
+-Normal Js utility funtion
+-useState()
+-useEffect()
+
+//Normal JS variable
+let listofres=
+// Local State variablee
+const[listofres] = useState();
