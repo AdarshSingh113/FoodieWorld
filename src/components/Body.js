@@ -2,34 +2,38 @@ import RestaurantCard from "./RestaurantCard";
 import resObj from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 
 const Body = () =>{
    const [listofRestaurant,setlistofRestaurant] = useState([]);
    const[searchText,setSearchText] = useState("");
    const[filteredResa,setFilteredResa]=useState([]);
 
-    useEffect(()=>{
-      fetchData();},
-      []);
 
+
+    useEffect(()=>{
    const fetchData = async () =>{
       const data = await fetch(
-        // "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8852716&lng=80.9237942&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-        "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING"
-      );
+         "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D23.022505%26lng%3D72.5713621%26page_type%3DDESKTOP_WEB_LISTING"
+    );
+        //"https://kind-puce-bull-tie.cyclic.app/api/proxy/swiggy/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING"
       const json = await data.json();
-      console.log(json);
-      //optional chaaining
-      setlistofRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setFilteredResa(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-   };
-    //Conditional Rendering
-      // if(listofRestaurant.length === 0){
-      //    return <Shimmer />;
-      // }
+      console.log("kjkjk",json);
+         // Optional chaining and nullish coalescing
+         const restaurants = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? [];
+         setlistofRestaurant(restaurants);
+         setFilteredResa(restaurants);
+   }
+   fetchData();},
+   []);
+   const onlineStatus = useOnlineStatus();
+   if (onlineStatus === false) {
+      return <h1>Sorry but babe u are offline</h1>;
+    }
 
-
-    return listofRestaurant.length === 0 ? <Shimmer /> :(
+    return  listofRestaurant.length === 0 ? <Shimmer /> :(
        <div className="body">
           <div className="filter">
           <div className="search">
@@ -59,7 +63,8 @@ const Body = () =>{
           </div>
              <div className="res-container">
                 {
-                   filteredResa.map(restaurant => <RestaurantCard key={restaurant.info.id}  resObj={restaurant}/>)
+                   filteredResa.map(restaurant => 
+                   <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id} className="link-style"><RestaurantCard   resObj={restaurant}/></Link>)
                 }
           </div>
        </div>

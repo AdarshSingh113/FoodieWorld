@@ -31,29 +31,35 @@
     cursor: pointer;
 }
 
+.cuisines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 /* Restaurant Card Styles */
 .res-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 15px; /* Reduced padding */
+    padding: 10px; /* Adjusted padding */
 }
 
 .res-card {
-    margin: 15px; /* Reduced margin */
-    padding: 15px; /* Reduced padding */
-    width: 220px; /* Smaller card width */
+    margin: 10px; /* Adjusted margin */
+    padding: 10px; /* Adjusted padding */
+    width: 200px; /* Adjusted card width */
     border: 1px solid #ced4da;
-    border-radius: 8px; /* Slightly smaller border radius */
+    border-radius: 6px; /* Adjusted border radius */
     background-color: #ffffff;
     transition: all 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Added a subtle box shadow */
 }
 
 .res-card:hover {
     cursor: pointer;
     border: 1px solid #007bff;
-    transform: scale(1.03); /* Smaller scale on hover */
-    box-shadow: 0px 0px 15px 0px rgba(0, 123, 255, 0.2);
+    transform: scale(1.02); /* Slightly smaller scale on hover */
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2); /* Enhanced box shadow on hover */
 }
 
 /* Search Styles */
@@ -115,6 +121,24 @@
       background-color: #3e8e41; /* Darken the background color further when button is clicked */
     }
   }
+  /* Add this to your CSS stylesheet or component styles */
+.link-style {
+  color: inherit; /* Use the default text color */
+  text-decoration: none; /* Remove underlines */
+}
+
+.link-style:hover {
+  text-decoration: none; /* Remove underlines on hover */
+}
+
+.user-card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
   
   
 
