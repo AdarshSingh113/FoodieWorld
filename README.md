@@ -46,3 +46,11 @@
 let listofres=
 // Local State variablee
 const[listofres] = useState();
+
+# Redux Toolkit
+-install @reduxjs/toolkit and react redux
+-Build Our store
+-Connect our store to our app
+-cart slice 
+-dispatch(action)
+-Selector

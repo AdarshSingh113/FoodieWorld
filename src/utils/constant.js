@@ -1,6 +1,6 @@
 export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-export const LOGO_URL="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH7nQFSZlgZ6FoZhg3JqNNfqD_YAAVvjZfOaNIPFQHPQurz1t_ZWzsTLuoxbOxyYRqVao&usqp=CAU";
+export const LOGO_URL="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdM8EjO7Lk5QThbCli0T5h6ZqALv07Rp36vg&usqp=CAU";
 
 //export const MENU_URL="https://kind-puce-bull-tie.cyclic.app/api/proxy/swiggy/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.8690764&lng=80.9491105&restaurantId="
 
