@@ -24,7 +24,9 @@ console.log(cartItems);
     return(
        <div className="flex justify-between bg-red-100 shadow-xl sm:bg-transparent ">
          <div className="logo-container">
+         <Link to="/">
              <img className="w-24" src={LOGO_URL}/>
+             </Link>
        </div>
           <div className="flex items-center">
              <ul className="flex p-4 m-4"> 
@@ -39,17 +41,17 @@ console.log(cartItems);
             <Link to="/about">
                About
             </Link>
-            <li className="px-4">Contact Us</li>
+            {/* <li className="px-4">Contact Us</li> */}
             <li className="px-4 font-bold">
               <Link to="/cart">
                Cart-({cartItems.length} items) 
                </Link>
                </li>
-            <li className="px-4">
+            {/* <li className="px-4">
                <Link to="/grocery">
                GroceryMart
             </Link>
-            </li>
+            </li> */}
             <button className="login" onClick={()=>{
                btnName ==="Login"?setBtnName("Logout"):setBtnName("Login")
             }}
